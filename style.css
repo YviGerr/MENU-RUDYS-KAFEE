@@ -1,4 +1,4 @@
-/* --- Variables con los colores del logo --- */
+/* --- Variables con los colores del logo (TEMA COMIDA - DEFAULT) --- */
 :root {
     --color-rojo: #eb5e46;    
     --color-turquesa: #46b1c9; 
@@ -6,6 +6,13 @@
     --color-carbon: #4a4a49;   
     --color-fondo: #ffffff;
     --font-main: 'Montserrat', sans-serif;
+}
+
+/* --- VARIABLES PARA EL TEMA BEBIDAS --- */
+body.theme-bebidas {
+    --color-rojo: #5c4033;     /* Café oscuro para Títulos y Precios */
+    --color-turquesa: #7b9e87; /* Verde Matcha para Pestaña y Botones */
+    --color-amarillo: #d4a373; /* Caramelo para Líneas y Detalles */
 }
 
 * {
@@ -19,6 +26,7 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-carbon);
     line-height: 1.5;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* --- HEADER Y MENÚ --- */
@@ -105,7 +113,7 @@ body {
 }
 
 /* =======================================================
-   NUEVO: PESTAÑAS (TABS) DE COMIDA Y BEBIDA
+   PESTAÑAS (TABS) DE COMIDA Y BEBIDA
    ======================================================= */
 .tabs-container {
     display: flex;
@@ -124,7 +132,7 @@ body {
     font-family: var(--font-main);
     cursor: pointer;
     border-radius: 25px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease; /* Transición suave de color */
     text-transform: uppercase;
     width: 150px;
 }
@@ -135,12 +143,12 @@ body {
 }
 
 .tab-content {
-    display: none; /* Ocultamos todo por defecto */
+    display: none; 
     animation: fadeIn 0.4s ease-in-out;
 }
 
 .tab-content.active {
-    display: block; /* Mostramos solo el seleccionado */
+    display: block; 
 }
 
 @keyframes fadeIn {
@@ -155,9 +163,9 @@ body {
     margin-top: 15px; 
     margin-bottom: 5px;
     color: var(--color-rojo); 
+    transition: color 0.4s ease; /* Transición suave de color */
 }
 
-/* NUEVO: Subtítulos para las categorías de bebidas */
 .sub-section-title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -166,12 +174,14 @@ body {
     margin-bottom: 15px;
     border-left: 4px solid var(--color-amarillo);
     padding-left: 10px;
+    transition: border-color 0.4s ease; /* Transición suave de color */
 }
 
 .divider {
     border: none;
     border-top: 2px solid var(--color-amarillo); 
     margin: 15px 0 25px 0;
+    transition: border-color 0.4s ease; /* Transición suave de color */
 }
 
 .category-spacing {
@@ -215,6 +225,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: border-color 0.4s ease; /* Transición suave de color */
 }
 
 .item-image-wrapper > img {
@@ -245,6 +256,7 @@ body {
     font-size: 1rem;
     font-weight: 600;
     color: var(--color-rojo); 
+    transition: color 0.4s ease; /* Transición suave de color */
 }
 
 @media (min-width: 768px) {
