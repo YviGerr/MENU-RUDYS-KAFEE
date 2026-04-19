@@ -417,3 +417,18 @@ body {
     color: var(--color-rojo);
     transition: color 0.4s ease;
 }
+/* =======================================================
+   AJUSTE DE BOTONES PARA CELULAR
+   ======================================================= */
+@media (max-width: 768px) {
+    .tabs-container {
+        gap: 8px; 
+        padding: 0 10px; 
+    }
+    .tab-btn {
+        width: auto; 
+        flex: 1; 
+        padding: 8px 5px; 
+        font-size: 0.8rem; 
+    }
+}
