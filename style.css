@@ -318,7 +318,83 @@ body {
     font-size: 0.85rem;
     transition: background-color 0.4s ease;
 }
+/* =======================================================
+   ESTILOS DEL NUEVO FOOTER (3 COLUMNAS)
+   ======================================================= */
+.footer {
+    background-color: var(--color-header);
+    color: #fff;
+    padding: 50px 20px 20px 20px; 
+    margin-top: 60px;
+    font-family: var(--font-main);
+    transition: background-color 0.4s ease;
+}
 
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    text-align: left;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    color: var(--color-amarillo); 
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.footer-text {
+    font-size: 0.95rem;
+    color: #cccccc; 
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.footer-socials img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.15); 
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #666; 
+    font-size: 0.85rem;
+    color: #999999;
+}
+
+/* Ajuste del Footer solo para Celular */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; 
+        text-align: center;
+        gap: 25px;
+    }
+    .footer-socials {
+        justify-content: center;
+    }
+}
 /* --- REGLAS EXCLUSIVAS PARA CELULARES --- */
 @media (max-width: 768px) {
     .menu-toggle { display: flex; }
