@@ -382,3 +382,38 @@ body {
     43%  { opacity: 0; } 
     100% { opacity: 0; } 
 }
+
+.extras-container {
+    max-width: 600px; /* Para que no se estire de más en computadoras */
+    margin: 0 auto;
+}
+
+.extra-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    border-bottom: 2px dotted var(--color-desc);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.extra-item:hover {
+    background-color: var(--color-caja);
+    transform: translateX(5px); /* Pequeño empujoncito a la derecha al tocarlo */
+}
+
+.extra-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-carbon);
+    transition: color 0.4s ease;
+}
+
+.extra-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-rojo);
+    transition: color 0.4s ease;
+}
